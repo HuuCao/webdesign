@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script&display=swap');
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: Darker Grotesque;
+    font-size: 18px;
+}
+#slides{
+    clip-path: ellipse(87% 55% at 52% 43%);
+}
+.navbar{
+    position: fixed;
+    background-color: white;
+    opacity: 1;
+    width: 100%;
+    z-index: 9;
+}
+
+
+.navbar-expand-md .navbar-collapse {
+    margin: 0;
+}
+.navbar ul li a{
+    margin: 0 20px;
+    color: #222;
+}
+.display-2{
+    font-family: Italianno;
+    font-size: 180px;
+    text-shadow: 5px 5px 10px black;
+    animation-name: animationtest;
+    animation-duration: 2s;
+}
+h3{
+    text-shadow: 2px 2px 7px black;    
+}
+.carousel{
+    z-index: 0;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: none;
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.status{
+    display: flex;
+    justify-content: center ;
+    font-family: Hind;
+}
+.col-md-12{
+    text-align: center;
+}
+.wrap{
+    position: absolute;
+    top: 50%;
+    left: 94%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+    text-align: center;
+}
+.list ul{
+    list-style-type: none;
+}
+.list ul li{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #222;
+    text-align: center;
+    padding-top: 1px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+.list ul li:hover{
+    color: black;
+    opacity: 1;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 0;
+    font-size: 25px;
+    transition: 0.2s;
+}
+.list ul li a i{
+    list-style-type: none;
+    color: black;
+}
+.display-4{
+    font-family: Pinyon Script;
+}
+.col-12{
+    font-family: initial;
+    font-size: 30px;
+    text-decoration: underline;
+    margin-top: 0;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+}
+.padding2{
+    position: relative;
+    display: flex;
+}
+/* Từ định dạng class box chuyển sang định dạng hai class box1 và box2**
+	Trong class box1 và box2 thay height bằng min-height để khi thêm ảnh thẻ có thể tự giãn ra**
+	Thêm flex: 45%; để chia tỉ lệ
+	Thêm magrin-top vào class img để cách tmg trong box1 và box2 cách 1 khoảng
+	Chuyển hết position sang relative**
+	Đưa class listt vào trong thẻ <div class="img">...
+	Nhớ định dạng lại top, left cho class listt
+	Nên hover vào thẻ img chứ k nên hover vào box
+*/
+.box1{
+    position: relative;
+	flex: 45%;
+    width: 700px;
+    min-height: 580px;
+    border: 1px solid white;
+    margin-left: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.box2{
+    position: relative;
+	flex: 45%;
+    width: 700px;
+    min-height: 580px;
+    border: 1px solid white;
+    margin-left: 20px;
+    border-radius: 5px;;
+    overflow: hidden;
+}
+.img{
+    position: relative;
+    z-index: 0;
+    background: #222;
+	margin-top: 25px;
+}
+.img:hover .img img{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.listt{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.listt ul{
+    list-style: none;
+}
+
+.listt ul li{
+    opacity: 0;
+    transition: 1s;
+    color: white;
+    transform: translateY(200px);
+}
+
+.img:hover .listt ul li{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.img:hover .listt ul li:nth-child(1){
+    transition-delay: 0.1s;
+}
+.font{
+    font-size: 120px;
+}
+
+.section{
+    background: #fff;
+    margin: 150px 0;
+}
+
+.imageBox{
+    position: relative;
+    margin: 40px auto;
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 300px;
+}
+
+.imageBox h3{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: -35px;
+    transition: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    transition: .5s;
+}
+
+.imageBox:hover h3{
+    top: 50%;
+    transform: translateY(-50%);
+    clip-path: circle(50% at 50% 50%);
+}
+
+.imageBox {
+    position: absolute;
+    margin-top: 0 auto;
+    padding: 0;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: .5s;
+}
+
+.imageBox:hover .btn{
+    transform: translateY(-60px);
+}
+
+
+
+@keyframes animationtest{
+    0%{
+        opacity: 0;
+        transform: translate(0, -100px);
+    }
+    80%{
+        transform: translate(0, -20px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+/*Giới thiệu sản phẩm*/
+
+.main{
+    margin-top: 100px;
+    margin-left: 30px;
+}
+.flew{
+    display: flex;
+    position: absolute;
+}
+
+.detail{
+    text-align: center;
+}
+
+.btn-outline-info{
+    width: 150px;
+    transform: translate(50%);
+    margin-bottom: 15px;
+}
+
+.product .card .img{
+    margin: 0;
+}
+
+.main .product .row .card{
+    position: relative;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.main .product .row .card .detail p{
+    font-size: 25px;
+    margin-top: 12px;
+}
+
+.main .product .row .card .img{
+    width: 100%;
+    transition: .5s all ease-in-out;
+}
+
+.main .product .row .card:hover .img{
+    transform: scale(1.11);
+    z-index: 1;
+}
+
+#padding{
+    margin-top: 100px;
+}
+#img7{
+    width: 100%;
+    transition: 2s all ease-in-out;
+}
+
+#img7:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+hr{
+    margin-top: 100px;
+}
+
+#mail{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.item-footer{
+    margin: 0 10px;
+    display: inline;
+    color: black;
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 10px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}   
